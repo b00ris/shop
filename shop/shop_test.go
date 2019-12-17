@@ -19,7 +19,7 @@ func TestCalculeteOrder(t *testing.T) {
 func TestCalculeteOrderConsistOf3ApplesEquals60(t *testing.T) {
 	result,err:=CalculeteOrder(Order{
 		OrderLine{
-			Product: "apple",
+			Product: "Apple",
 			Count:   3,
 		},
 	})
@@ -28,5 +28,19 @@ func TestCalculeteOrderConsistOf3ApplesEquals60(t *testing.T) {
 	}
 	if result!=60 {
 		t.FailNow()
+	}
+}
+func TestCalculeteOrderConsistOf3MangosEquals60(t *testing.T) {
+	result,err:=CalculeteOrder(Order{
+		OrderLine{
+			Product: "Mango",
+			Count:   3,
+		},
+	})
+	if err!=nil {
+		t.Fatal("error")
+	}
+	if result!=90 {
+		t.Fatal("result is incorrect")
 	}
 }

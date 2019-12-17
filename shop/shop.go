@@ -9,8 +9,9 @@ type OrderLine struct {
 
 type Order []OrderLine
 var prices = map[string]int64 {
-	"apple":20,
+	"Apple":20,
 	"Banana":30,
+	"Mango":30,
 }
 
 // CalculeteOrder calculates grand total for order.
